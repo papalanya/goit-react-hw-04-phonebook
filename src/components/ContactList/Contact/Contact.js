@@ -2,20 +2,19 @@ import PropTypes from 'prop-types';
 
 import { ContactListItem } from 'components/ContactList/Contact/Contact.styled';
 
-
-
-export const Contact = ({ contact: {id, name, number}, onDeleteContact }) => {
+export const Contact = ({ contact: { id, name, number }, onDeleteContact }) => {
   return (
     <ContactListItem>
       <p>
         {name}: <span>{number}</span>
       </p>
-      <button type="button" onClick={() => onDeleteContact(id)}>Delete</button>
+      <button type="button" onClick={() => onDeleteContact(id)}>
+        Delete
+      </button>
     </ContactListItem>
   );
 };
 
-// eslint-disable-next-line react/no-typos
 Contact.propTypes = {
   contact: PropTypes.exact({
     id: PropTypes.string.isRequired,
