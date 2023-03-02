@@ -5,7 +5,7 @@ import { ContactList } from 'components/ContactList/ContactList';
 import { Filter } from 'components/Filter/Filter';
 import { Container, Title, SubTitle } from 'components/App.styled';
 
-const App = () => {
+export const App = () => {
   const [contacts, setContacts] = useState([
     { id: 'id-1', name: 'Rosie Simpson', number: '459-12-56' },
     { id: 'id-2', name: 'Hermione Kline', number: '443-89-12' },
@@ -70,5 +70,3 @@ const App = () => {
     </Container>
   );
 };
-
-export default App;
